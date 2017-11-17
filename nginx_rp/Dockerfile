@@ -6,4 +6,4 @@ RUN apk update && \
     mkdir -p /var/www/html
 
 COPY root/* /root/
-COPY nginx.conf /etc/nginx/
+COPY nginx.conf.1 /etc/nginx/nginx.conf
