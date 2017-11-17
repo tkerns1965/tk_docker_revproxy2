@@ -4,4 +4,5 @@ RUN apk update && \
     apk add certbot && \
     rm /etc/nginx/nginx.conf
 
+COPY root/* /root/
 COPY nginx.conf /etc/nginx/
