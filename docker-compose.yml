@@ -5,6 +5,8 @@ services:
         build: nginx_rp
         image: img_revproxy2_rp
         container_name: revproxy2_rp
+        volumes:
+            - vol_webroot:/var/www/html
         ports:
             - "80:80"
             - "443:443"
@@ -24,3 +26,7 @@ services:
         image: img_revproxy2_web2
         container_name: revproxy2_web2
         restart: always
+
+volumes:
+    vol_webroot:
+        external: true
